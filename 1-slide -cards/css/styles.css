@@ -1,0 +1,77 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #eee;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0.2vw;
+  height: 80vh;
+  border-radius: 3em;
+  color: white;
+  cursor: pointer;
+  flex: 0.2;
+  position: relative;
+  opacity: 0.6;
+  transition: flex 0.6s ease-in, opacity 0.6s ease-in;
+}
+.card:hover {
+  opacity: 1;
+  flex: 0.5;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.isActive {
+  flex: 5;
+  height: 90vh;
+  opacity: 1;
+}
+.isActive:hover {
+  flex: 5;
+}
+
+.isActive h2 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.5s;
+}
+
+@media (max-width: 480px) {
+  main {
+    width: 100vw;
+  }
+
+  .card:nth-of-type(4),
+  .card:nth-of-type(5) {
+    display: none;
+  }
+
+  .card h2 {
+    font-size: 1em;
+  }
+}

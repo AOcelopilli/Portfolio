@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --main-color: rgb(0, 183, 255);
+  --main-second-color: rgb(112, 215, 255);
+  --inactive-color: #eee;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  text-align: center;
+}
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  height: 2.5em;
+  align-items: center;
+  max-width: 100%;
+  width: 50vw;
+}
+
+.progress-container::before {
+  content: " ";
+  background-color: var(--inactive-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--main-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle {
+  background-color: white;
+  color: var(--main-color);
+  border: 3px solid var(--inactive-color);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.3s ease-in;
+}
+
+.active {
+  border: 3px solid var(--main-color);
+}
+
+button {
+  background-color: var(--main-second-color);
+  margin: 2px;
+  padding: 4px;
+  height: 30px;
+  width: 100px;
+  border: 0;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:disabled {
+  background-color: var(--inactive-color);
+  cursor: not-allowed;
+}
