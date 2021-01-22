@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Yusei Magic, sans-serif;
+}
+
+body {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px 20px;
+  padding: 0 20px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.faq {
+  position: relative;
+  background-color: rgba(233, 233, 233, 0.883);
+  margin: 10px auto;
+  padding: 5px;
+  width: 400px;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+
+.faq.active {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color: #15fa75;
+  font-size: 5rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 10px;
+  right: 80px;
+  z-index: 0;
+}
+
+.faq.active::after {
+  color: #208df3;
+  top: 30px;
+  right: 30px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+  height: 50px;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-btn {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  outline: none;
+}
+
+.faq-btn li {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  display: none;
+  outline: none;
+}
+
+.faq-btn li:first-child {
+  display: block;
+}
+
+.faq.active .faq-btn li:first-child {
+  display: none;
+}
+
+.faq.active .faq-btn li:last-child {
+  display: block;
+}

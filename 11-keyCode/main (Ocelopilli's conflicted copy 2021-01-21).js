@@ -4,18 +4,18 @@ const d = document,
 d.addEventListener("keypress", (e) => {
   let $template = `
   <div>
-  <h2>${e.key.toUpperCase()}</h2>
-  <p>Event Key</p>
+  <h2>Event Key</h2>
+  <p>${e.key.toUpperCase()}</p>
   </div>
 
   <div>
-  <h2>${e.keyCode}</h2>
-  <p>Event Code</p>
+  <h2>Event Code</h2>
+  <p>${e.keyCode}</p>
   </div>
 
   <div>
-  <h2>${e.code}</h2>
-  <p>Event Code</p>
+  <h2>Event Code</h2>
+  <p>${e.code}</p>
   </div>
   `;
 
