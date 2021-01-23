@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Fraunces, sans-serif;
+  color: #888;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(235, 233, 243, 0.459);
+}
+
+h1 {
+  font-size: 40px;
+  color: cadetblue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+label {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+#choices {
+  border: thick solid gray;
+  border-radius: 10px;
+  height: 150px;
+  padding: 60px 0;
+  margin: 20px auto;
+  text-align: center;
+  width: 400px;
+  overflow: hidden;
+}
+
+#choices:focus {
+  outline: none;
+  border-color: rgb(185, 185, 185);
+}
+
+.sort-choices .choice {
+  background-color: steelblue;
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.choice.active {
+  background-color: rgb(17, 67, 107);
+}
